@@ -105,3 +105,9 @@ dist
 
 # Firebase
 .firebaserc
+
+# Svelte
+.DS_Store
+/.svelte-kit
+/build
+/functions
