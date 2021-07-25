@@ -15,16 +15,16 @@
     "eslint": "^7.27.0",
     "eslint-config-prettier": "^8.1.0",
     "eslint-plugin-svelte3": "^3.2.0",
-    "prettier": "~2.2.1",
+    "prettier": "^2.3.2",
     "prettier-plugin-svelte": "^2.2.0",
     "svelte": "^3.34.0",
-    "svelte-adapter-firebase": "^0.7.7",
+    "svelte-adapter-firebase": "^0.10.5",
     "svelte-preprocess": "^4.0.0",
     "tslib": "^2.0.0",
     "typescript": "^4.0.0"
   },
   "type": "module",
   "dependencies": {
-    "firebase": "^9.0.0-beta.2"
+    "firebase": "^9.0.0-beta.7"
   }
 }
