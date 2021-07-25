@@ -6,7 +6,11 @@
     "build": "npx rimraf public && svelte-kit build",
     "preview": "svelte-kit preview",
     "lint": "prettier --check --plugin-search-dir=. . && eslint --ignore-path .gitignore .",
-    "format": "prettier --write --plugin-search-dir=. ."
+    "format": "prettier --write --plugin-search-dir=. .",
+    "prepare": "npm run vite-workaround && npm run smui-theme-light && npm run smui-theme-dark",
+    "vite-workaround": "find node_modules/@material/ -name '*.js.map' -type f -delete",
+    "smui-theme-light": "smui-theme compile public/smui.css -i src/theme",
+    "smui-theme-dark": "smui-theme compile public/smui-dark.css -i src/theme/dark"
   },
   "devDependencies": {
     "@sveltejs/kit": "next",
@@ -17,6 +21,7 @@
     "eslint-plugin-svelte3": "^3.2.0",
     "prettier": "^2.3.2",
     "prettier-plugin-svelte": "^2.2.0",
+    "smui-theme": "^4.2.0",
     "svelte": "^3.34.0",
     "svelte-adapter-firebase": "^0.10.5",
     "svelte-preprocess": "^4.0.0",
@@ -25,6 +30,7 @@
   },
   "type": "module",
   "dependencies": {
+    "@smui/button": "^4.2.0",
     "firebase": "^9.0.0-beta.7"
   }
 }
