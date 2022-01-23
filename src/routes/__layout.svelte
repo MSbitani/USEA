@@ -1,16 +1,15 @@
-<script>
-	import { onMount } from 'svelte';
-	import { firebaseApp } from '../firebase';
-	import { initializeAppCheck, ReCaptchaV3Provider } from 'firebase/app-check';
-	import TopAppBar, { Row, Section, Title } from '@smui/top-app-bar';
+<script lang="ts">
+	import TopAppBar, {
+		Row,
+		Section,
+		Title,
+		AutoAdjust,
+		TopAppBarComponentDev
+	} from '@smui/top-app-bar';
 	import IconButton from '@smui/icon-button';
-	import LoginButton from '../auth/LoginButton.svelte';
+	import LoginButton from '$lib/auth/LoginButton.svelte';
 
-	onMount(async () => {
-		initializeAppCheck(firebaseApp, {
-			provider: new ReCaptchaV3Provider('6LciN9YaAAAAAH7W5SGO4i74-df_MEHU974oivnr')
-		});
-	});
+	let topAppBar: TopAppBarComponentDev;
 </script>
 
 <svelte:head>
@@ -18,7 +17,7 @@
 	<link rel="stylesheet" href="node_modules/svelte-material-ui/bare.css" />
 </svelte:head>
 
-<TopAppBar fixed>
+<TopAppBar bind:this={topAppBar} fixed>
 	<Row>
 		<Section>
 			<IconButton class="material-icons">menu</IconButton>
@@ -30,7 +29,9 @@
 	</Row>
 </TopAppBar>
 
-<slot />
+<AutoAdjust {topAppBar}>
+	<slot />
+</AutoAdjust>
 
 <style>
 	:global(body),

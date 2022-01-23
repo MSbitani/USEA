@@ -1,6 +1,6 @@
 import { onMount } from 'svelte';
 import { getAuth, isSignInWithEmailLink, signInWithEmailLink, sendSignInLinkToEmail, signInWithRedirect, signOut, GoogleAuthProvider } from 'firebase/auth';
-import { firebaseApp } from "../firebase";
+import { firebaseApp } from "$lib/firebase";
 import { readable } from 'svelte/store';
 
 interface User {

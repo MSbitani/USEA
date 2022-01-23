@@ -1,15 +1,15 @@
-<script>
+<script lang="ts">
 	import { onMount } from 'svelte';
 	import { isValidLinkLogin, emailLogin, googleLogin, logout, user } from './index';
 	import Button, { Label, Icon } from '@smui/button';
 	import IconButton from '@smui/icon-button';
 	import CircularProgress from '@smui/circular-progress';
-	import MenuSurface from '@smui/menu-surface';
+	import MenuSurface, { MenuSurfaceComponentDev } from '@smui/menu-surface';
 	import { Separator } from '@smui/list';
 	import Textfield from '@smui/textfield';
-	import HelperText from '@smui/textfield/helper-text/index';
+	import HelperText from '@smui/textfield/helper-text';
 
-	let loginOptions;
+	let loginOptions: MenuSurfaceComponentDev;
 	let showEmailLogin = false;
 	let loginEmail = null;
 	let invalidEmail = false;
