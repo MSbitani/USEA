@@ -15,10 +15,10 @@
     "eslint": "^8.7.0",
     "eslint-config-prettier": "^8.1.0",
     "eslint-plugin-svelte3": "^4.0.0",
-    "prettier": "^2.3.2",
+    "prettier": "^3.0.0",
     "prettier-plugin-svelte": "^2.2.0",
     "smui-theme": "^7.0.0-beta.0",
-    "svelte": "^3.41.0",
+    "svelte": "^4.1.1",
     "svelte-adapter-firebase": "^0.15.0",
     "svelte-material-ui": "^7.0.0-beta.0",
     "svelte-preprocess": "^5.0.1",
@@ -27,6 +27,6 @@
   },
   "type": "module",
   "dependencies": {
-    "firebase": "^9.6.4"
+    "firebase": "^10.1.0"
   }
 }
